@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  db:
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./db/my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./db/data:/var/lib/mysql --user 1000
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
