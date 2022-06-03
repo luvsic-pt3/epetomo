@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { mutate } from "swr"
 import { styled } from "@mui/material/styles"
-
 import Card from "@mui/material/Card"
 import CardActions from "@mui/material/CardActions"
 import CardContent from "@mui/material/CardContent"
@@ -10,6 +9,7 @@ import { IconButtonProps } from "@mui/material/IconButton"
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
 import Collapse from "@mui/material/Collapse"
 import Link from "@material-ui/core/Link"
+import { Profile } from "../type"
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean
@@ -26,7 +26,7 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
   }),
 }))
 
-function Profile({ profile: profile }) {
+function ProfileItem( profile: Profile ) {
   const [deleting, setDeleting] = useState(false)
   const [expanded, setExpanded] = useState(false)
 
@@ -106,4 +106,4 @@ function Profile({ profile: profile }) {
   )
 }
 
-export default Profile
+export default ProfileItem
