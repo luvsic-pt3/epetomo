@@ -1,4 +1,4 @@
-import { useRecoilState } from "recoil"
+import { useSetRecoilState } from "recoil"
 import { killPerDeathAtom } from "./recoilState"
 import { TextField } from "@material-ui/core"
 
@@ -7,7 +7,7 @@ interface Props {
 }
 
 export function KillPerDeathForm({ defaultValue }: Props) {
-  const [state, setState] = useRecoilState(killPerDeathAtom)
+  const setState = useSetRecoilState(killPerDeathAtom)
 
   return (
     <>

@@ -1,4 +1,4 @@
-import { useRecoilState } from "recoil"
+import { useSetRecoilState } from "recoil"
 import { highestDamageAtom } from "./recoilState"
 import { TextField } from "@material-ui/core"
 
@@ -7,7 +7,7 @@ interface Props {
 }
 
 export function HighestDamageForm({ defaultValue }: Props) {
-  const [state, setState] = useRecoilState(highestDamageAtom)
+  const setState = useSetRecoilState(highestDamageAtom)
 
   return (
     <>

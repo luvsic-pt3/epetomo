@@ -1,4 +1,4 @@
-import { useRecoilState } from "recoil"
+import { useSetRecoilState } from "recoil"
 import { addressAtom } from "./recoilState"
 import { MenuItem, Select } from "@material-ui/core"
 
@@ -7,7 +7,7 @@ interface Props {
 }
 
 export function AddressForm({ defaultValue }: Props) {
-  const [state, setState] = useRecoilState(addressAtom)
+  const setState = useSetRecoilState(addressAtom)
 
   return (
     <>

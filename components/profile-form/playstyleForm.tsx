@@ -1,4 +1,4 @@
-import { useRecoilState } from "recoil"
+import { useSetRecoilState } from "recoil"
 import { playStyleAtom } from "./recoilState"
 import { MenuItem, Select } from "@material-ui/core"
 
@@ -7,7 +7,7 @@ interface Props {
 }
 
 export function PlayStyleForm({ defaultValue }: Props) {
-  const [state, setState] = useRecoilState(playStyleAtom)
+  const setState = useSetRecoilState(playStyleAtom)
 
   return (
     <>

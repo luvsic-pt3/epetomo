@@ -1,4 +1,4 @@
-import { useRecoilState } from "recoil"
+import { useSetRecoilState } from "recoil"
 import { descriptionAtom } from "./recoilState"
 import { TextareaAutosize } from "@material-ui/core"
 
@@ -7,7 +7,7 @@ interface Props {
 }
 
 export function DescriptionForm({ defaultValue }: Props) {
-  const [state, setState] = useRecoilState(descriptionAtom)
+  const setState = useSetRecoilState(descriptionAtom)
 
   return (
     <>

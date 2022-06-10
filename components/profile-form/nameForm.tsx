@@ -1,4 +1,4 @@
-import { useRecoilState } from "recoil"
+import { useSetRecoilState } from "recoil"
 import { nameAtom } from "./recoilState"
 import { TextField } from "@material-ui/core"
 
@@ -7,7 +7,7 @@ interface Props {
 }
 
 export function NameForm({ defaultValue }: Props) {
-  const [state, setState] = useRecoilState(nameAtom)
+  const setState = useSetRecoilState(nameAtom)
 
   return (
     <>

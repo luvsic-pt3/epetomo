@@ -1,4 +1,4 @@
-import { useRecoilState } from "recoil"
+import { useSetRecoilState } from "recoil"
 import { timeToPlayAtom } from "./recoilState"
 import { MenuItem, Select } from "@material-ui/core"
 
@@ -7,7 +7,7 @@ interface Props {
 }
 
 export function TimeToPlayForm({ defaultValue }: Props) {
-  const [state, setState] = useRecoilState(timeToPlayAtom)
+  const setState = useSetRecoilState(timeToPlayAtom)
 
   return (
     <>

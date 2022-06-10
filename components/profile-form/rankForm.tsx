@@ -1,4 +1,4 @@
-import { useRecoilState } from "recoil"
+import { useSetRecoilState } from "recoil"
 import { rankAtom } from "./recoilState"
 import { MenuItem, Select } from "@material-ui/core"
 
@@ -7,7 +7,7 @@ interface Props {
 }
 
 export function RankForm({ defaultValue }: Props) {
-  const [state, setState] = useRecoilState(rankAtom)
+  const setState = useSetRecoilState(rankAtom)
 
   return (
     <>

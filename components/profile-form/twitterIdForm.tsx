@@ -1,4 +1,4 @@
-import { useRecoilState } from "recoil"
+import { useSetRecoilState } from "recoil"
 import { twitterIdAtom } from "./recoilState"
 import { TextField } from "@material-ui/core"
 
@@ -7,7 +7,7 @@ interface Props {
 }
 
 export function TwitterIdForm({ defaultValue }: Props) {
-  const [state, setState] = useRecoilState(twitterIdAtom)
+  const setState = useSetRecoilState(twitterIdAtom)
 
   return (
     <>

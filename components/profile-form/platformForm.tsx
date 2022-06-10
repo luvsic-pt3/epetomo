@@ -1,4 +1,4 @@
-import { useRecoilState } from "recoil"
+import { useSetRecoilState } from "recoil"
 import { platFormAtom } from "./recoilState"
 import { MenuItem, Select } from "@material-ui/core"
 
@@ -7,7 +7,7 @@ interface Props {
 }
 
 export function PlatFormForm({ defaultValue }: Props) {
-  const [state, setState] = useRecoilState(platFormAtom)
+  const setState = useSetRecoilState(platFormAtom)
 
   return (
     <>

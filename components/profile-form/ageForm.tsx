@@ -1,4 +1,4 @@
-import { useRecoilState } from "recoil"
+import { useSetRecoilState } from "recoil"
 import { ageAtom } from "./recoilState"
 import { MenuItem, Select } from "@material-ui/core"
 
@@ -7,7 +7,7 @@ interface Props {
 }
 
 export function AgeForm({ defaultValue }: Props) {
-  const [state, setState] = useRecoilState(ageAtom)
+  const setState = useSetRecoilState(ageAtom)
 
   return (
     <>

@@ -1,4 +1,4 @@
-import { useRecoilState } from "recoil"
+import { useSetRecoilState } from "recoil"
 import { sexAtom } from "./recoilState"
 import { MenuItem, Select } from "@material-ui/core"
 
@@ -7,7 +7,7 @@ interface Props {
 }
 
 export function SexForm({ defaultValue }: Props) {
-  const [state, setState] = useRecoilState(sexAtom)
+  const setState = useSetRecoilState(sexAtom)
 
   return (
     <>

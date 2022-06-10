@@ -1,4 +1,4 @@
-import { useRecoilState } from "recoil"
+import { useSetRecoilState } from "recoil"
 import { voiceChatAtom } from "./recoilState"
 import { MenuItem, Select } from "@material-ui/core"
 
@@ -7,7 +7,7 @@ interface Props {
 }
 
 export function VoiceChatForm({ defaultValue }: Props) {
-  const [state, setState] = useRecoilState(voiceChatAtom)
+  const setState = useSetRecoilState(voiceChatAtom)
 
   return (
     <>
