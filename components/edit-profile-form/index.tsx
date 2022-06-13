@@ -1,25 +1,25 @@
-import { useState, useEffect } from "react"
-import Router, { useRouter } from "next/router"
+import { useEffect, useState } from "react"
+import Router from "next/router"
 import Button from "../button"
 import {
-  nameAtom,
-  sexAtom,
-  ageAtom,
   addressAtom,
-  twitterIdAtom,
-  platFormAtom,
-  playStyleAtom,
-  timeToPlayAtom,
-  purposeAtom,
+  ageAtom,
+  descriptionAtom,
   favoriteLegendAtom,
   favoriteWeaponAtom,
   highestDamageAtom,
-  rankAtom,
-  voiceChatAtom,
-  descriptionAtom,
   killPerDeathAtom,
+  nameAtom,
+  platFormAtom,
+  playStyleAtom,
+  purposeAtom,
+  rankAtom,
+  sexAtom,
+  timeToPlayAtom,
+  twitterIdAtom,
+  voiceChatAtom,
 } from "../profile-form/recoilState"
-import { useRecoilState, useRecoilValue } from "recoil"
+import { useRecoilState } from "recoil"
 
 import { NameForm } from "../profile-form/nameForm"
 import { SexForm } from "../profile-form/sexForm"
@@ -135,7 +135,7 @@ export default function ProfileForm({
           playstyle: playStyleState,
           voicechat: voiceChatState,
           time_to_play: timeToPlayState,
-          purpose: "purpose",
+          purpose: purposeState,
           favorite_weapon: favoriteWeaponState,
           favorite_legend: favoriteLegendState,
           highest_damage: highestDamageState,
