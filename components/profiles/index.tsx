@@ -6,7 +6,7 @@ function Profiles({ profiles }) {
     return (
       <div>
         <Grid container spacing={3}>
-          {profiles.each((profile) => (
+          {profiles.map((profile) => (
             <Grid item xs={3}>
               <Profile profile={profile} />
             </Grid>

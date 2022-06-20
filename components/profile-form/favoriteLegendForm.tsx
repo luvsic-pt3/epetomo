@@ -1,11 +1,6 @@
 import { useRecoilState } from "recoil"
 import { favoriteLegendAtom } from "./recoilState"
-import {
-  createStyles,
-  makeStyles,
-  useTheme,
-  Theme,
-} from "@material-ui/core/styles"
+import { createStyles, makeStyles, Theme, useTheme } from "@material-ui/core/styles"
 import Input from "@material-ui/core/Input"
 import MenuItem from "@material-ui/core/MenuItem"
 import FormControl from "@material-ui/core/FormControl"
@@ -78,7 +73,7 @@ export function FavoriteLegendForm({ defaultValue }: Props) {
           input={<Input id="select-multiple-chip" />}
           renderValue={(selected) => (
             <div className={classes.chips}>
-              {(selected as string[]).each((value) => (
+              {(selected as string[]).map((value) => (
                 <Chip
                   key={value}
                   label={value}
