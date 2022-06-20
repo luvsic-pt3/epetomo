@@ -22,7 +22,7 @@ export function VoiceChatForm({ defaultValue }: Props) {
           onChange={(event) => setState(event.target.value)}
         >
           <MenuItem value={"あり"}>あり</MenuItem>
-          <MenuItem value={"なしog"}>なし</MenuItem>
+          <MenuItem value={"なし"}>なし</MenuItem>
         </Select>
       </div>
     </>
