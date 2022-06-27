@@ -1,14 +1,15 @@
-import Profile from "./profile"
+import ProfileItem from "./profile"
 import { Grid } from "@mui/material"
+import { Profile } from "./type"
 
 function Profiles({ profiles }) {
   if (profiles) {
     return (
       <div>
         <Grid container spacing={3}>
-          {profiles.map((profile) => (
+          {profiles.map((profile: Profile) => (
             <Grid item xs={3}>
-              <Profile profile={profile} />
+              <ProfileItem profile={profile} />
             </Grid>
           ))}
         </Grid>
