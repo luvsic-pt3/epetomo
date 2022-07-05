@@ -3,6 +3,7 @@ import { Grid } from "@mui/material"
 import { Profile } from "./type"
 
 function Profiles({ profiles }) {
+  profiles.map((profile: Profile) => console.log(profile))
   if (profiles) {
     return (
       <div>
