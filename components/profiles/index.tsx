@@ -2,7 +2,11 @@ import ProfileItem from "./profile"
 import { Grid } from "@mui/material"
 import { Profile } from "./type"
 
-function Profiles({ profiles }) {
+interface ProfilesProps  {
+  profiles: Array<Profile>
+}
+
+function Profiles({ profiles }: ProfilesProps) {
   profiles.map((profile: Profile) => console.log(profile))
   if (profiles) {
     return (

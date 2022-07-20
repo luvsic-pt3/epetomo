@@ -26,7 +26,11 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
   }),
 }))
 
-function ProfileItem( profile: Profile ) {
+interface ProfileProps  {
+  profile: Profile
+}
+
+function ProfileItem({ profile }: ProfileProps) {
   const [deleting, setDeleting] = useState(false)
   const [expanded, setExpanded] = useState(false)
 
