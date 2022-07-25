@@ -4,11 +4,12 @@ import { styled } from "@mui/material/styles"
 import Card from "@mui/material/Card"
 import CardActions from "@mui/material/CardActions"
 import CardContent from "@mui/material/CardContent"
-import { IconButton, Typography } from "@mui/material"
+import { Button, IconButton, Typography } from "@mui/material"
 import { IconButtonProps } from "@mui/material/IconButton"
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
 import Collapse from "@mui/material/Collapse"
 import Link from "@material-ui/core/Link"
+import { Close as CloseIcon } from "@mui/icons-material"
 import { Profile } from "../type"
 
 interface ExpandMoreProps extends IconButtonProps {
@@ -104,6 +105,7 @@ function ProfileItem({ profile }: ProfileProps) {
           <Typography paragraph>{profile.kill_per_death}</Typography>
           <Typography paragraph>ランク:</Typography>
           <Typography paragraph>{profile.rank}</Typography>
+          <Button onClick={deleteProfile}><CloseIcon /></Button>
         </CardContent>
       </Collapse>
     </Card>
