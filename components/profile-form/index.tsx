@@ -98,7 +98,7 @@ export default function ProfileForm() {
           playstyle: playStyleState,
           voicechat: voiceChatState,
           time_to_play: timeToPlayState,
-          purpose: "a",
+          purpose: purposeState,
           favorite_weapon: favoriteWeaponState.join(","),
           favorite_legend: favoriteLegendState.join(","),
           highest_damage: highestDamageState,
